@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'SafeView AI',
+  title: 'SafeX AI',
   description: 'Real-time AI-powered safety monitoring dashboard.',
 };
 

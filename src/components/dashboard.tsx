@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
-import { Users, Siren, ShieldCheck, Video, Activity, Clock } from 'lucide-react';
+import { Users, Siren, Video, Activity, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -63,17 +63,16 @@ export default function Dashboard() {
   const stats = useMemo(() => [
     { title: "Workers on Site", value: "78", description: "All workers accounted for", Icon: Users },
     { title: "Active Alerts", value: activeAlertsCount, description: "Real-time incidents", Icon: Siren },
-    { title: "Safety Score", value: "98%", description: "Overall site safety rating", Icon: ShieldCheck },
   ], [activeAlertsCount]);
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">
       <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background/95 backdrop-blur-sm px-4 md:px-6">
-        <h1 className="text-2xl font-semibold text-foreground">SafeView AI Dashboard</h1>
+        <h1 className="text-2xl font-semibold text-foreground">SafeX AI Dashboard</h1>
       </header>
 
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2">
           {stats.map(({ title, value, description, Icon }) => (
             <Card key={title}>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
